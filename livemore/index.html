@@ -12,16 +12,16 @@
     <link href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet" />
-    <link href="../stylesheets/site.css" rel="stylesheet" />
+    <link href="stylesheets/site.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.2.6/gridstack.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../javascripts/site.js"></script>
+    <script src="javascripts/site.js"></script>
   </head>
 
-  <body class="account account_index">
+  <body class="index">
     <div class="container">
   <div class="row header row-eq-height">
     <div class="col-12 col-sm-2 logo-div">
@@ -32,33 +32,79 @@
         <input type="text" id="search_box" placeholder="Search">
       </div>
     </div>
+    <div class="col-12 col-sm-4">
+      <div class="menu">
+        <span class="menu_option"><h3>Categories</h3></span>
+            <div class="btn-group">
+            <span type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <h3 class="active menu-option">Action</h3>
+            </span>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Social</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Lifestyle</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Health</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Financial</a>
+              <div class="dropdown-divider"></div>
+              <a href="smarthome/" target="_blank" class="dropdown-item">Smart Home</a>
+            </div>
+          </div>
+      </div>
+    </div>
   </div>
 
   <div class="row">
     <div class="col-12 col-sm-2">
       <div class="options">
         <div class="option">
-           <h3><a href="Aeon/" target="_blank" class="dropdown-item">Will Cards</a></h3>
+          <h3 class="option active">Will Cards</h3>
         </div>
         <div class="option">
-          <h3 class="option">Account</h3>
+          <h3><a href="account/" target="_blank" class="dropdown-item">Account</a></h3>
         </div>
         <div class="option">
-          <h3 class="option active">LiveMore</h3>
-        </div>
-        <div class="option">
-          <h3>LiveMore</h3>
+          <h3><a href="livemore/" target="_blank" class="dropdown-item">LiveMore</a></h3>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-  </body>
-</html>
-<div class="col-12 col-sm-9">
+    <div class="col-12 col-sm-9">
       <div class="grid-stack">
-        <div class="grid-stack-item"
+    <!-- Inicia blog -->
+      <html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  </head>
+  <body>
+    
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Yeti Agency</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+    <div class="callout large primary">
+      <div class="row column text-center">
+        <h1>Our Blog</h1>
+      </div>
+    </div>
+    
     <div class="row" id="content">
       <div class="medium-8 columns">
         <div class="blog-post">
@@ -84,7 +130,7 @@
             </ul>
           </div>
         </div>
-        </div>
+
         <div class="blog-post">
           <h3>Awesome blog post title <small>3/6/2015</small></h3>
           <img class="thumbnail" src="http://placehold.it/850x350">
@@ -109,26 +155,7 @@
           </div>
         </div>
       </div>
-      </div>
-      <div class="medium-3 columns" data-sticky-container>
-        <div class="sticky" data-sticky data-anchor="content">
-          <h4>Categories</h4>
-          <ul>
-            <li><a href="#">Skyler</a></li>
-            <li><a href="#">Jesse</a></li>
-            <li><a href="#">Mike</a></li>
-            <li><a href="#">Holly</a></li>
-          </ul>
-
-          <h4>Authors</h4>
-          <ul>
-            <li><a href="#">Skyler</a></li>
-            <li><a href="#">Jesse</a></li>
-            <li><a href="#">Mike</a></li>
-            <li><a href="#">Holly</a></li>
-          </ul>
-        </div>
-      </div>
+    
     </div>
     
     <div class="row column">
@@ -152,6 +179,23 @@
     </script>
   </body>
 </html>
+        
+       <!-- Termina blog -->  
+        
+      </div>
+    </div>
+    <div class="col-12 col-sm-1">
+      <div class="options">
+        <svg height="500" width="100">
+          <circle cx="30" cy="220" r="5" stroke-width="3" fill="#006C9B" />
+          <circle cx="30" cy="250" r="5" stroke-width="3" fill="#D4D4D4" />
+          <circle cx="30" cy="280" r="5" stroke-width="3" fill="#D4D4D4" />
+          <circle cx="30" cy="310" r="5" stroke-width="3" fill="#D4D4D4" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
+  </body>
+</html>
