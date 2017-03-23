@@ -9,12 +9,27 @@ platform_data = {
   "Nest": {"action": "Send account info" , "confirm": "Confirm purchase for</br>$3 USD", "account": "aeonest@aeonapp.com" ,"send_to":"d....i@yahoo.com"}
 }
 
-function changeToAction(platform){
-  current_data = platform_data[platform]
-  console.log(current_data)
-  content = '<div class="content_headerregister"><div class="content_titleregister">'+ platform + '</div><div class="content_titleedit">edit</div></div><div class="content_headersubtitle">'+ current_data["account"] + '</div><div class="content_registeraction"><div class="content_actionname">'+ current_data["action"]+ '</div><div class="content_actionaccount">' + current_data["send_to"] +'</div></div>'
-  console.log($($(document.activeElement).parents()[1]).html(content))
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
 
+function changeToAction(platform, obj){
+  var container = $(obj).parents('.grid-stack-item-content');
+  var email = container.find(":text").val();
+  var pass = container.find(":password").val();
+  
+  if (!validateEmail(email) || pass.length<8){
+    var error = container.find('.content_error');
+    error.hide();
+    error.fadeIn( "slow" );
+  }else{
+    current_data = platform_data[platform]
+    console.log(current_data)
+    content = '<div class="content_headerregister"><div class="content_titleregister">'+ platform + '</div><div class="content_titleedit">edit</div></div><div class="content_headersubtitle">'+ current_data["account"] + '</div><div class="content_registeraction"><div class="content_actionname">'+ current_data["action"]+ '</div><div class="content_actionaccount">' + current_data["send_to"] +'</div></div>'
+    console.log($($(document.activeElement).parents()[1]).html(content))
+
+  }
   $(function () {
       var options = {
           cellHeight: 80,
@@ -23,15 +38,23 @@ function changeToAction(platform){
       $('.grid-stack').gridstack(options);
 
   });
-
 }
 
-function changeToConfirm(platform){
-  current_data = platform_data[platform]
-  console.log(current_data)
-  content = '<div class="content_headerregister"><div class="content_titleregister">'+ platform +'</div></div><div class="content_headersubtitle">'+ current_data["account"] + '</div><div class="content_registeraction"><div class="content_actionname">'+current_data["confirm"]+'</div></div><div class="submit"><input class="activate" type="submit" value="Activate" onclick="changeToAction(\''+platform+'\')"></div>'
-  console.log($($(document.activeElement).parents()[1]).html(content))
-
+function changeToConfirm(platform,obj){
+  var container = $(obj).parents('.grid-stack-item-content');
+  var email = container.find(":text").val();
+  var pass = container.find(":password").val();
+  
+  if (!validateEmail(email) || pass.length<8){
+    var error = container.find('.content_error');
+    error.hide();
+    error.fadeIn( "slow" );
+  }else{
+    current_data = platform_data[platform]
+    console.log(current_data)
+    content = '<div class="content_headerregister"><div class="content_titleregister">'+ platform +'</div></div><div class="content_headersubtitle">'+ current_data["account"] + '</div><div class="content_registeraction"><div class="content_actionname">'+current_data["confirm"]+'</div></div><div class="submit"><input class="activate" type="submit" value="Activate" onclick="changeToAction(\''+platform+'\')"></div>'
+    console.log($($(document.activeElement).parents()[1]).html(content))
+  }
   $(function () {
       var options = {
           cellHeight: 80,
