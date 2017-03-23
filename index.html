@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Welcome to AEON</title>
+    <title>Welcome to Asphodel</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.2.6/gridstack.min.css" rel="stylesheet" />
     <link href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
@@ -78,12 +78,13 @@
                   <div class="content_title">
                     Facebook
                   </div>
+                  <div class="content_error">Wrong username or password</div>
                   <div class="content_filldetails">
                     <input type="text" class="box" placeholder="username or email">
                     <input type="password" class="box"placeholder="password">
                   </div>
                   <div class="submit">
-                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Facebook')">
+                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Facebook',this)">
                   </div>
                 </div>
         </div>
@@ -94,12 +95,13 @@
                   <div class="content_title">
                     Twitter
                   </div>
+                  <div class="content_error">Wrong username or password</div>
                   <div class="content_filldetails">
                     <input type="text" class="box" placeholder="username or email">
                     <input type="password" class="box"placeholder="password">
                   </div>
                   <div class="submit">
-                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Twitter')">
+                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Twitter',this)">
                   </div>
                 </div>
         </div>
@@ -110,12 +112,13 @@
                   <div class="content_title">
                     Pinterest
                   </div>
+                  <div class="content_error">Wrong username or password</div>
                   <div class="content_filldetails">
                     <input type="text" class="box" placeholder="username or email">
                     <input type="password" class="box"placeholder="password">
                   </div>
                   <div class="submit">
-                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Pinterest')">
+                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Pinterest',this)">
                   </div>
                 </div>
         </div>
@@ -126,12 +129,13 @@
                   <div class="content_title">
                     LinkedIn
                   </div>
+                  <div class="content_error">Wrong username or password</div>
                   <div class="content_filldetails">
                     <input type="text" class="box" placeholder="username or email">
                     <input type="password" class="box"placeholder="password">
                   </div>
                   <div class="submit">
-                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('LinkedIn')">
+                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('LinkedIn',this)">
                   </div>
                 </div>
         </div>
@@ -142,12 +146,13 @@
                   <div class="content_title">
                     Google
                   </div>
+                  <div class="content_error">Wrong username or password</div>
                   <div class="content_filldetails">
                     <input type="text" class="box" placeholder="username or email">
                     <input type="password" class="box"placeholder="password">
                   </div>
                   <div class="submit">
-                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Google')">
+                    <input class="activate" type="submit" value="Activate" onclick="changeToAction('Google',this)">
                   </div>
                 </div>
         </div>
@@ -156,14 +161,15 @@
             data-gs-width="4" data-gs-height="3">
                 <div class="grid-stack-item-content" style="border-color: #53C3B9">
                   <div class="content_title">
-                    Nest
+                    Next
                   </div>
+                  <div class="content_error">Wrong username or password</div>
                   <div class="content_filldetails">
                     <input type="text" class="box" placeholder="username or email">
                     <input type="password" class="box"placeholder="password">
                   </div>
                   <div class="submit">
-                    <input class="activate" type="submit" value="$3 USD" onclick="changeToConfirm('Nest')">
+                    <input class="activate" type="submit" value="$3 USD" onclick="changeToConfirm('Nest',this)">
                   </div>
                 </div>
         </div>
